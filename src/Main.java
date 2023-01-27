@@ -18,6 +18,34 @@ public class Main {
         }
         return year;
     }
+    public static int osName () {
+        var clientOS = 1;
+        return clientOS;
+    }
+    public static int osYear () {
+        var clientDeviceYear = 2013;
+        return clientDeviceYear;
+    }
+    public static int iOs () {
+        if (osName() == 0 && osYear() >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (osName() == 0 && osYear() < 2015) {
+            System.out.println(" Установите облегченную версию приложения для iOS по ссылке");
+        }
+
+
+        return 0;
+    }
+    public static int android () {
+        if (osName() == 1 && osYear() >= 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (osName() == 1 && osYear() < 2015) {
+            System.out.println(" Установите облегченную версию приложения для Android по ссылке");
+        }
+        return 1;
+    }
+
+
 
     public static void main(String[] args) {
         System.out.println("Задача 1");
@@ -33,6 +61,41 @@ public class Main {
        // а в меине мы просто выводим итоговый метод на принт :)
         // или я не правильно понял саму задачу о_О, но покастил именно так
         proverkaGoda();
+
+        System.out.println("Задача 2");
+        //Задача 2
+        //
+        //Вспомните задание 2 из урока «Условные операторы»,
+        // где вы предлагали пользователю облегченную версию приложения.
+        //Напишите метод, куда подаются два параметра: тип операционной
+        // системы (0 — iOS, 1 — Android ) и год выпуска устройства.
+       // Если устройство старше текущего года, предложите ему установить облегченную версию.
+      //  Текущий год можно получить таким способом:
+         //  int currentYear = LocalDate.now().getYear();
+        // Или самим задать значение вручную — ввести в переменную числовое значение.
+        //  В результате программа должна выводить в консоль сообщение,
+        //  какую версию приложения (обычную или облегченную) и для
+        //  какой ОС (Android или iOS) установить пользователю.
+        //var clientOS = 0;
+        //int clientDeviceYear = 2088;
+
+        //if (clientOS == 0 && clientDeviceYear >= 2015) {
+        //    System.out.println( "Установите версию приложения для iOS по ссылке");
+        //} else if (clientOS == 0 && clientDeviceYear < 2015) {
+        //    System.out.println(" Установите облегченную версию приложения для iOS по ссылке");
+        //}else {
+//
+        //if (clientOS == 1 && clientDeviceYear >= 2015) {
+        //    System.out.println( "Установите версию приложения для Android по ссылке");
+        //} else if (clientOS == 1 && clientDeviceYear < 2015) {
+        //    System.out.println(" Установите облегченную версию приложения для Android по ссылке");
+       // }}
+        osYear();
+        osName();
+        if (iOs()) {
+            else android();
         }
 
+
+    }
 }
