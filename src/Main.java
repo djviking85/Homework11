@@ -7,6 +7,7 @@ public class Main {
         return year2;
     }
 
+
     public static int proverkaGoda () {
         // этот метод считает високосный или нет и выводит
         var year = yearPrint() ;
