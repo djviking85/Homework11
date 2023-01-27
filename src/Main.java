@@ -45,6 +45,35 @@ public class Main {
         return 1;
     }
 
+    public static int writeDistance() {
+        var deliveryDistance = 62;
+        return deliveryDistance;
+
+    }
+
+  //  public static int writeDays () {
+   //    int deliveryDays = 1;
+  //     deliveryDays++;
+  //     return deliveryDays;
+  //  }
+    public static int writeDays () {
+        int delivery =1;
+        if (writeDistance() > 20) {
+            delivery++;
+        }
+        if  (writeDistance() > 60) {
+            delivery++;
+        }
+        return delivery;
+    }
+    public static void noDostavka () {
+        System.out.println( "Доставки нет");
+    }
+    public static void yesDostavka() {
+        System.out.println(" чтоб доставить клиенту карту, на " + writeDistance() + " км, потребуется "  + writeDays() + "  дней");
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -84,5 +113,41 @@ public class Main {
         iOs();
         android();
 
+        System.out.println("Задача 3");
+        // Возвращаемся к задаче на расчет дней доставки банковской карты.
+        // Ваша задача — доработать код, а именно написать метод,
+        // который на вход принимает дистанцию и возвращает итоговое количество дней доставки.
+        //    В банке для клиентов организовывается доставка карт на дом.
+        //   Чтобы известить клиента о том, когда будет доставлена его карта,
+        //  нужно знать расстояние от офиса до адреса доставки.
+        //  Правила доставки такие:
+        //  Доставка в пределах 20 км занимает сутки.
+        //  Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.
+        //  Доставка в пределах от 60 км до 100 км добавляет еще одни сутки.
+        //  Свыше 100 км доставки нет.
+        //  То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
+        //  Напишите программу, которая выдает сообщение в
+        //  консоль: "Потребуется дней: " + срок доставки.
+        //  Объявите целочисленную переменную deliveryDistance = 95,
+        //  которая содержит дистанцию до клиента.
+        var deliveryDistance = 65;
+        var deliveryDays = 1;
+       //if (writeDistance() > 20) {
+       //     writeDays();
+        writeDays();
+       //  if  (writeDistance() > 60) {
+        //    writeDays();
+      //  }
+        if (writeDistance() > 100) {
+            noDostavka();
+       //     System.out.println( "Доставки нет");
+        }else
+            yesDostavka();
+       //     System.out.println(" чтоб доставить клиенту карту, на " + writeDistance() + " км, потребуется "  + deliveryDays + "  дней");
+        System.out.println();
+
     }
+
+
+
 }
