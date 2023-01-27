@@ -6,8 +6,6 @@ public class Main {
         var year2 = 2000;
         return year2;
     }
-
-
     public static int proverkaGoda () {
         // этот метод считает високосный или нет и выводит
         var year = yearPrint() ;
@@ -19,24 +17,26 @@ public class Main {
         return year;
     }
     public static int osName () {
-        var clientOS = 1;
+        // по этому методу, вводим тип операционной системы ( 0 и 1)
+        var clientOS = 0;
         return clientOS;
     }
     public static int osYear () {
-        var clientDeviceYear = 2013;
+        // по этому методу, вводим год системы
+        var clientDeviceYear = 2019;
         return clientDeviceYear;
     }
     public static int iOs () {
+        // в этом методе мы считаем какая у нас версия аоса
         if (osName() == 0 && osYear() >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (osName() == 0 && osYear() < 2015) {
             System.out.println(" Установите облегченную версию приложения для iOS по ссылке");
         }
-
-
         return 0;
     }
     public static int android () {
+        // в это методе мы считаем какая у нас версия ведроида
         if (osName() == 1 && osYear() >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else if (osName() == 1 && osYear() < 2015) {
@@ -58,44 +58,31 @@ public class Main {
         // то напечатайте сообщение: «...  год — високосный год». Если год невисокосный,
         // то: «... год — невисокосный год».
 
-       // а в меине мы просто выводим итоговый метод на принт :)
+
+        // а в меине мы просто выводим итоговый метод на принт :)
         // или я не правильно понял саму задачу о_О, но покастил именно так
         proverkaGoda();
 
         System.out.println("Задача 2");
         //Задача 2
-        //
         //Вспомните задание 2 из урока «Условные операторы»,
         // где вы предлагали пользователю облегченную версию приложения.
         //Напишите метод, куда подаются два параметра: тип операционной
         // системы (0 — iOS, 1 — Android ) и год выпуска устройства.
        // Если устройство старше текущего года, предложите ему установить облегченную версию.
-      //  Текущий год можно получить таким способом:
+        //  Текущий год можно получить таким способом:
          //  int currentYear = LocalDate.now().getYear();
         // Или самим задать значение вручную — ввести в переменную числовое значение.
         //  В результате программа должна выводить в консоль сообщение,
         //  какую версию приложения (обычную или облегченную) и для
         //  какой ОС (Android или iOS) установить пользователю.
-        //var clientOS = 0;
-        //int clientDeviceYear = 2088;
 
-        //if (clientOS == 0 && clientDeviceYear >= 2015) {
-        //    System.out.println( "Установите версию приложения для iOS по ссылке");
-        //} else if (clientOS == 0 && clientDeviceYear < 2015) {
-        //    System.out.println(" Установите облегченную версию приложения для iOS по ссылке");
-        //}else {
-//
-        //if (clientOS == 1 && clientDeviceYear >= 2015) {
-        //    System.out.println( "Установите версию приложения для Android по ссылке");
-        //} else if (clientOS == 1 && clientDeviceYear < 2015) {
-        //    System.out.println(" Установите облегченную версию приложения для Android по ссылке");
-       // }}
+        // соединяем вышестоящие методы
+
         osYear();
         osName();
-        if (iOs()) {
-            else android();
-        }
-
+        iOs();
+        android();
 
     }
 }
